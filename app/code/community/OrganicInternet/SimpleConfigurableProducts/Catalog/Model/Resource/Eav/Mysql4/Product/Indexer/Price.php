@@ -55,7 +55,7 @@ class OrganicInternet_SimpleConfigurableProducts_Catalog_Model_Resource_Eav_Mysq
         if (!isset($data['reindex_price'])) {
             return $this;
         }
-        $this->cloneIndexTable(true);
+        $this->clearTemporaryIndexTable(true);
         $this->_prepareWebsiteDateTable();
 
         $indexer = $this->_getIndexer($data['product_type_id']);
