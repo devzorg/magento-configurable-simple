@@ -64,7 +64,7 @@ class OrganicInternet_SimpleConfigurableProducts_Catalog_Block_Product_View_Type
 
         $p = $this->getProduct();
         $config['childProducts'] = $childProducts;
-        if ((Mage::getStoreConfigFlag('SCP_options/product_page/show_label_from')  && $p->getMaxPossibleFinalPrice() != $p->getFinalPrice()) {
+        if (Mage::getStoreConfigFlag('SCP_options/product_page/show_label_from')  && $p->getMaxPossibleFinalPrice() != $p->getFinalPrice()) {
             $config['priceFromLabel'] = $this->__('Price From:');
         } else {
             $config['priceFromLabel'] = $this->__('');
