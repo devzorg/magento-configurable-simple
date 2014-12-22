@@ -15,7 +15,7 @@ class OrganicInternet_SimpleConfigurableProducts_Catalog_Block_Product_Price
                 . $this->getIdSuffix()
                 . '"><span class="configurable-price-from-label">';
 
-                if ((Mage::getStoreConfigFlag('SCP_options/product_page/show_label_from')  && $product->getMaxPossibleFinalPrice() != $product->getFinalPrice()) {
+                if (Mage::getStoreConfigFlag('SCP_options/product_page/show_label_from')  && $product->getMaxPossibleFinalPrice() != $product->getFinalPrice()) {
                     $extraHtml .= $this->__('Price From:');
                 }
                 $extraHtml .= '</span></span>';
